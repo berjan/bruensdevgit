@@ -1,0 +1,357 @@
+/*  Document   : styles.css
+ *  Created on : 4-aug-2011, 19:08:46
+ *  Author     : edv
+ *  Description:
+ *      Purpose of the stylesheet follows.
+ */
+body {
+  display: block;
+  background: #efefef url(../body_pattern.jpg) repeat 50% 50% fixed;
+  margin: 0;
+  padding: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  color: #555555;
+  text-shadow: white 0 1px 0; }
+  body h1, body h2 {
+    color: #d5015e;
+    padding: 10px 10px 0;
+    font-weight: normal; }
+  body h1 {
+    font-size: 1.8em; }
+  body h2 {
+    font-size: 1.5em; }
+
+.container {
+  min-width: 940px;
+  max-width: 1840px;
+  margin: 0 auto; }
+
+.head {
+  -webkit-box-shadow: #dddddd 0 2px 2px;
+  -moz-box-shadow: #dddddd 0 2px 2px;
+  -o-box-shadow: #dddddd 0 2px 2px;
+  box-shadow: #dddddd 0 2px 2px;
+  display: block;
+  height: 80px;
+  background: white;
+  border-bottom: 1px solid #bbbbbb; }
+  .head .logo {
+    width: 40%;
+    float: left;
+    padding: 10px 0 0 20px; }
+  .head .powernav {
+    width: 50%;
+    text-align: right;
+    float: right;
+    margin: 30px 20px 0 0; }
+
+.navigation {
+  margin: 20px 20px 0;
+  background: white;
+  position: relative; }
+  .navigation .expander {
+    -webkit-box-shadow: white 1px 0px 0;
+    -moz-box-shadow: white 1px 0px 0;
+    -o-box-shadow: white 1px 0px 0;
+    box-shadow: white 1px 0px 0;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    height: 20px;
+    width: 20px;
+    background: #999999;
+    color: white;
+    text-indent: -9000px;
+    overflow: hidden;
+    -webkit-transform: rotate(45deg);
+    z-index: -2; }
+  .navigation:hover .expander {
+    display: none; }
+  .navigation:hover ul {
+    height: auto; }
+  .navigation ul {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    height: 38px;
+    overflow: hidden; }
+    .navigation ul li {
+      width: 100px;
+      float: left;
+      margin: 3px 35px 5px;
+      padding: 4px 10px;
+      height: 24px; }
+      .navigation ul li a {
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+        border-radius: 15px;
+        min-width: 80px;
+        display: block; }
+
+.main {
+  margin: 20px 20px 0;
+  position: relative;
+  height: auto; }
+  .main .login {
+    width: 300px;
+    padding: 10px;
+    margin: 80px auto; }
+    .main .login label {
+      margin: 10px 0 10px 20px;
+      display: block;
+      width: auto; }
+    .main .login input {
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+      border-radius: 5px;
+      border: 1px solid #dddddd;
+      width: 90%; }
+  .main .side {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 250px;
+    min-height: 200px; }
+  .main .wrapper {
+    display: block;
+    margin-left: 270px;
+    height: 100px;
+    background: white;
+    min-height: 600px; }
+    .main .wrapper .content {
+      display: block; }
+
+.rounded5 {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px; }
+
+.boxed {
+  -webkit-box-shadow: rgba(150, 150, 150, 0.35) 0px 0px 20px;
+  -moz-box-shadow: rgba(150, 150, 150, 0.35) 0px 0px 20px;
+  -o-box-shadow: rgba(150, 150, 150, 0.35) 0px 0px 20px;
+  box-shadow: rgba(150, 150, 150, 0.35) 0px 0px 20px;
+  border: 1px solid #cacaca;
+  background: white;
+  margin-bottom: 20px; }
+
+.button {
+  -webkit-box-shadow: inset white 0 1px 0;
+  -moz-box-shadow: inset white 0 1px 0;
+  -o-box-shadow: inset white 0 1px 0;
+  box-shadow: inset white 0 1px 0;
+  background: #f2f2f2;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to');
+  background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#dddddd));
+  background: -moz-linear-gradient(top, #f2f2f2, #dddddd);
+  border: 1px solid #dddddd;
+  padding: 5px 15px 5px 10px;
+  text-align: center;
+  color: #777777;
+  font-weight: bold;
+  text-decoration: none; }
+  .button:hover {
+    -webkit-box-shadow: inset #dea8c0 0 1px 0;
+    -moz-box-shadow: inset #dea8c0 0 1px 0;
+    -o-box-shadow: inset #dea8c0 0 1px 0;
+    box-shadow: inset #dea8c0 0 1px 0;
+    background: #d5015e;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to');
+    background: -webkit-gradient(linear, left top, left bottom, from(#d5015e), to(#aa014b));
+    background: -moz-linear-gradient(top, #d5015e, #aa014b);
+    color: white;
+    text-shadow: #aa014b 0 1px 0;
+    border: 1px solid #aa014b; }
+  .button:active {
+    -webkit-box-shadow: black 0 0 6px;
+    -moz-box-shadow: black 0 0 6px;
+    -o-box-shadow: black 0 0 6px;
+    box-shadow: black 0 0 6px;
+    background: #aa014b;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to');
+    background: -webkit-gradient(linear, left top, left bottom, from(#aa014b), to(#d5015e));
+    background: -moz-linear-gradient(top, #aa014b, #d5015e);
+    color: white;
+    text-shadow: #aa014b 0 1px 0;
+    border: 1px solid #aa014b; }
+
+.foot {
+  padding: 0 20px 20px;
+  text-align: center; }
+
+ul.drilldown {
+  list-style: none;
+  margin: 10px 0;
+  padding: 0;
+  font-size: 14px;
+  font-weight: bold; }
+  ul.drilldown a {
+    text-decoration: none;
+    color: #666666; }
+  ul.drilldown ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: none; }
+  ul.drilldown li {
+    padding: 4px 15px 4px; }
+    ul.drilldown li li {
+      padding: 0;
+      font-weight: normal;
+      font-size: 14px;
+      padding: 2px 0; }
+      ul.drilldown li li a {
+        color: #666666 !important; }
+    ul.drilldown li:hover {
+      -webkit-box-shadow: inset #eeeeee 0 1px 1px;
+      -moz-box-shadow: inset #eeeeee 0 1px 1px;
+      -o-box-shadow: inset #eeeeee 0 1px 1px;
+      box-shadow: inset #eeeeee 0 1px 1px;
+      background: #efefef;
+      border-top: 1px solid #dddddd;
+      border-bottom: 1px solid #dddddd;
+      font-size: 18px;
+      font-weight: normal; }
+      ul.drilldown li:hover a {
+        color: #d5015e; }
+      ul.drilldown li:hover ul {
+        padding-top: 4px;
+        display: block; }
+
+.timetrack .fsSearch {
+  padding: 10px; }
+.timetrack .fsFilter {
+  -webkit-box-shadow: inset #dddddd 0 0 2px;
+  -moz-box-shadow: inset #dddddd 0 0 2px;
+  -o-box-shadow: inset #dddddd 0 0 2px;
+  box-shadow: inset #dddddd 0 0 2px;
+  background: #efefef;
+  border-width: 1px 0 1px 0;
+  border-style: solid;
+  border-color: #dddddd;
+  padding: 10px; }
+.timetrack .fsNieuw {
+  margin: 0 10px;
+  position: relative; }
+  .timetrack .fsNieuw .boxCalendar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200px; }
+  .timetrack .fsNieuw .boxSettings {
+    margin-left: 220px; }
+    .timetrack .fsNieuw .boxSettings .fldSlider {
+      width: 100%; }
+      .timetrack .fsNieuw .boxSettings .fldSlider .labels {
+        font-size: 10px;
+        height: 20px; }
+        .timetrack .fsNieuw .boxSettings .fldSlider .labels span {
+          width: 10%;
+          display: block;
+          float: left;
+          text-align: center; }
+          .timetrack .fsNieuw .boxSettings .fldSlider .labels span:first-child {
+            text-align: left; }
+          .timetrack .fsNieuw .boxSettings .fldSlider .labels span:last-child {
+            text-align: right; }
+      .timetrack .fsNieuw .boxSettings .fldSlider .slider {
+        clear: both;
+        background: #efefef;
+        text-align: center;
+        padding: 2px; }
+    .timetrack .fsNieuw .boxSettings .fldDateTime {
+      margin-top: 10px;
+      height: 30px; }
+      .timetrack .fsNieuw .boxSettings .fldDateTime .fldDate input {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+        border: 1px solid #dddddd;
+        color: #d5015e;
+        width: 120px;
+        float: left;
+        padding: 4px 10px;
+        font-size: 14px; }
+      .timetrack .fsNieuw .boxSettings .fldDateTime .fldTime {
+        width: 240px;
+        float: right;
+        text-align: right; }
+        .timetrack .fsNieuw .boxSettings .fldDateTime .fldTime input {
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          -o-border-radius: 5px;
+          border-radius: 5px;
+          border: 1px solid #dddddd;
+          width: 40px;
+          padding: 4px;
+          text-align: right;
+          color: #d5015e;
+          font-size: 14px; }
+    .timetrack .fsNieuw .boxSettings .fldDescription {
+      padding-right: 5px; }
+      .timetrack .fsNieuw .boxSettings .fldDescription textarea {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        -ms-border-radius: 5px;
+        -o-border-radius: 5px;
+        border-radius: 5px;
+        border: 1px solid #dddddd;
+        margin-right: 4px;
+        width: 100%; }
+.timetrack .fsSubmit {
+  clear: both;
+  margin: 5px 10px; }
+  .timetrack .fsSubmit a {
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    background: #04ad00;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to');
+    background: -webkit-gradient(linear, left top, left bottom, from(#04ad00), to(#056802));
+    background: -moz-linear-gradient(top, #04ad00, #056802);
+    color: white;
+    text-shadow: black 0 1px 0;
+    border: 1px solid #056802;
+    padding: 5px 20px;
+    font-weight: 400;
+    font-size: 12px;
+    float: right; }
+.timetrack .entries {
+  margin-top: 20px; }
+  .timetrack .entries table {
+    width: 100%;
+    border: 0;
+    margin: 0;
+    padding: 0; }
+    .timetrack .entries table thead th, .timetrack .entries table tfoot th {
+      background: #efefef;
+      font-size: 12px;
+      font-weight: normal;
+      border-width: 1px 0 1px 0;
+      border-style: solid;
+      border-color: #dddddd; }
+    .timetrack .entries table tr:hover td {
+      background: #efefef; }
+    .timetrack .entries table td, .timetrack .entries table th {
+      font-size: 11px;
+      padding: 6px; }
+      .timetrack .entries table td:first-child, .timetrack .entries table th:first-child {
+        padding-left: 10px; }
+      .timetrack .entries table tdlast-child, .timetrack .entries table thlast-child {
+        padding-right: 10px; }
+    .timetrack .entries table th {
+      text-align: left; }
+    .timetrack .entries table .select {
+      width: 20px; }

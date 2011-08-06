@@ -1,0 +1,356 @@
+/* 
+ *  Document   : styles.css
+ *  Created on : 4-aug-2011, 19:08:46
+ *  Author     : edv
+ *  Description:
+ *      Purpose of the stylesheet follows.
+ */
+//VARIABLES
+$pink       : #D5015E
+$pinkdark   : #AA014B
+
+
+//MIXINS
+@mixin rounded($radius)
+    -webkit-border-radius: $radius
+    -moz-border-radius: $radius
+    -ms-border-radius: $radius
+    -o-border-radius: $radius
+    border-radius: $radius
+
+@mixin shadow($color, $x, $y, $z)
+    -webkit-box-shadow: $color $x $y $z
+    -moz-box-shadow: $color $x $y $z
+    -o-box-shadow: $color $x $y $z
+    box-shadow: $color $x $y $z
+
+@mixin gradient($from, $to)
+    background: $from
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='$from', endColorstr='$to')
+    background: -webkit-gradient(linear, left top, left bottom, from($from), to($to))
+    background: -moz-linear-gradient(top,  $from,  $to)
+
+@mixin rotate($deg)
+    -webkit-transform: rotate($deg)
+    -moz-transform: rotate($deg)
+    -ms-transform: rotate($deg)
+    -o-transform: rotate($deg)
+
+//STYLING
+// BODY STYLING = ROOT ELEMENT
+body 
+    display: block
+    background: #efefef url(../body_pattern.jpg) repeat 50% 50% fixed
+    margin: 0
+    padding: 0
+    font:
+        family: "Helvetica Neue", Helvetica, Arial, sans-serif
+        size: 12px
+    color: #555
+    text-shadow: #fff 0 1px 0
+
+    h1, h2
+        color: $pink
+        padding: 10px 10px 0
+        font-weight: normal
+    h1
+        font-size: 1.8em
+    h2
+        font-size: 1.5em
+
+.container
+    min-width: 940px
+    max-width: 1840px
+    margin: 0 auto
+    
+
+// HEAD STYLES
+.head
+    @include shadow(#ddd, 0, 2px, 2px)
+    display: block
+    height: 80px
+    background: #fff
+    border-bottom: 1px solid #bbb
+    .logo 
+        width: 40% 
+        float: left 
+        padding: 10px 0 0 20px
+    .powernav
+        width: 50% 
+        text-align: right 
+        float: right 
+        margin: 30px 20px 0 0
+
+// NAVIGATION STYLES
+.navigation
+    margin: 20px 20px 0
+    background: #fff
+    position: relative
+    .expander
+        @include shadow(#fff, 1px, 0px, 0)
+        position: absolute
+        bottom: -10px
+        left: 50%
+        height: 20px
+        width: 20px
+        background: #999
+        color: #fff
+        text-indent: -9000px
+        overflow: hidden
+        -webkit-transform: rotate(45deg)
+        z-index: -2
+    // If the navigation is hovered, resize to automatic height, 
+    // so extra options will be shown..
+    &:hover
+        .expander
+            display: none
+        ul
+            height: auto
+    ul
+        list-style: none
+        margin: 0px
+        padding: 0px
+        height: 38px
+        overflow: hidden
+        li
+            width: 100px
+            float: left
+            margin: 3px 35px 5px
+            padding: 4px 10px
+            height: 24px
+            a
+                @include rounded(15px)
+                min-width: 80px
+                display: block
+
+.main
+    margin: 20px 20px 0
+    position: relative
+    height: auto
+    .login
+        width: 300px
+        padding: 10px
+        margin: 80px auto
+        label
+            margin:  10px 0 10px 20px
+            display: block
+            width: auto
+        input
+            @include rounded(5px)
+            border: 1px solid #ddd
+            width: 90%
+    .side
+        position: absolute
+        top: 0px
+        left: 0px
+        width: 250px
+        min-height: 200px
+    .wrapper
+        display: block
+        margin-left: 270px
+        height: 100px
+        background: #fff
+        min-height: 600px
+        .content
+            display: block
+.rounded5
+    @include rounded(5px)
+
+.boxed
+    @include shadow(rgba(150, 150, 150, 0.35),  0px,  0px,  20px)
+    border: 1px solid #cacaca
+    background: #fff
+    margin-bottom: 20px
+
+.button
+    @include shadow(inset #fff, 0, 1px, 0)
+    @include gradient(#f2f2f2, #dddddd)
+    border: 1px solid #ddd
+    padding: 5px 15px 5px 10px
+    text-align: center
+    color: #777
+    font-weight: bold
+    text-decoration: none
+    &:hover
+        @include shadow(inset #dea8c0, 0, 1px, 0)
+        @include gradient($pink, $pinkdark)
+        color: #FFF
+        text-shadow: #aa014b 0 1px 0
+        border: 1px solid #aa014b
+    &:active
+        @include shadow(#000, 0, 0, 6px)
+        @include gradient($pinkdark, $pink)
+        color: #FFF
+        text-shadow: #aa014b 0 1px 0
+        border: 1px solid #aa014b
+
+// FOOTER
+
+.foot
+    padding: 0 20px 20px
+    text-align: center
+
+// DRILLDOWN MENU SIDEBAR STYLING
+ul.drilldown
+    list-style: none
+    margin: 10px 0
+    padding: 0
+    font-size: 14px
+    font-weight: bold
+    a
+        text-decoration: none
+        color: #666
+    ul
+        list-style: none
+        margin: 0
+        padding: 0
+        display: none
+    li
+        padding: 4px 15px 4px
+        li
+            padding: 0
+            font-weight: normal
+            font-size: 14px
+            padding: 2px 0
+            a
+                color: #666 !important
+        &:hover
+            @include shadow(inset #eee, 0, 1px, 1px)
+            background: #efefef
+            border-top: 1px solid #ddd
+            border-bottom: 1px solid #ddd
+            font-size: 18px
+            font-weight: normal
+            a
+                color: $pink
+            ul 
+                padding-top: 4px
+                display: block
+
+// STYLING OF TIMETRACKING
+.timetrack
+    .fsSearch
+        padding: 10px
+    .fsFilter
+        @include shadow(inset #ddd, 0, 0, 2px)
+        background: #efefef
+        border:
+            width: 1px 0 1px 0
+            style: solid 
+            color: #ddd
+        padding: 10px
+    
+    .fsNieuw 
+        margin: 0 10px
+        position: relative
+        .boxCalendar
+            position: absolute
+            top: 0
+            left: 0
+            width: 200px
+        .boxSettings
+            margin-left: 220px
+            .fldSlider
+                width: 100%
+                .labels
+                    font-size: 10px
+                    height: 20px
+                    span
+                        width: 10%
+                        display: block
+                        float: left
+                        text-align: center
+                        &:first-child
+                            text-align: left
+                        &:last-child
+                            text-align: right
+                .slider
+                    clear: both
+                    background: #efefef
+                    text-align: center
+                    padding: 2px
+            .fldDateTime
+                margin-top: 10px
+                height: 30px
+                .fldDate input
+                    @include rounded(5px)
+                    border: 1px solid #ddd
+                    color: $pink
+                    width: 120px
+                    float: left
+                    padding: 4px 10px
+                    font-size: 14px
+                .fldTime
+                    width: 240px
+                    float: right
+                    text-align: right
+                    input
+                        @include rounded(5px)
+                        border: 1px solid #ddd
+                        width: 40px
+                        padding: 4px
+                        text-align: right
+                        color: $pink
+                        font-size: 14px
+            .fldDescription 
+                
+                padding-right: 5px
+                textarea
+                    @include rounded(5px)
+                    border: 1px solid #ddd
+                    //padding: 4px 10px
+                    margin-right: 4px
+                    width: 100%
+    .fsSubmit
+        clear: both
+        margin: 5px 10px
+        a
+            @include rounded(15px)
+            @include gradient(#04ad00, #056802)
+            color: #fff
+            text-shadow: #000 0 1px 0
+            border: 1px solid #056802
+            padding: 5px 20px
+            font:
+                weight: 400
+                size: 12px
+            float: right
+
+    .entries
+        margin-top: 20px
+        table
+            width: 100%
+            border: 0
+            margin: 0
+            padding: 0
+            thead th, tfoot th
+                background: #efefef
+                font:
+                    size: 12px
+                    weight: normal
+
+                border:
+                    width: 1px 0 1px 0
+                    style: solid
+                    color: #ddd
+            tr
+                &:hover td
+                    background: #efefef
+            td, th
+                font-size: 11px
+                padding: 6px
+                &:first-child
+                    padding-left: 10px
+                &last-child
+                    padding-right: 10px
+            th
+                text-align: left
+            .select
+                width: 20px
+//            .description                
+            .duration
+                width: 60px
+            .date
+                width: 120px
+            .project
+                width: 120px
