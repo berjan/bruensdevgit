@@ -1,4 +1,4 @@
-/* 
+/*
  *  Document   : styles.css
  *  Created on : 4-aug-2011, 19:08:46
  *  Author     : edv
@@ -30,6 +30,11 @@ $pinkdark   : #AA014B
     background: -webkit-gradient(linear, left top, left bottom, from($from), to($to))
     background: -moz-linear-gradient(top,  $from,  $to)
 
+@mixin  progressBackground($perc, $from, $to)
+    background: $from
+    background: -webkit-gradient(linear, $perc top, $perc top, from($from), to($to))
+    background: -moz-linear-gradient(left,  $from, $from $perc,  $to $perc)
+
 @mixin rotate($deg)
     -webkit-transform: rotate($deg)
     -moz-transform: rotate($deg)
@@ -38,7 +43,7 @@ $pinkdark   : #AA014B
 
 //STYLING
 // BODY STYLING = ROOT ELEMENT
-body 
+body
     display: block
     background: #efefef url(../body_pattern.jpg) repeat 50% 50% fixed
     margin: 0
@@ -57,12 +62,16 @@ body
         font-size: 1.8em
     h2
         font-size: 1.5em
+    a
+        color: $pink
+        text-decoration: none
+        &:hover
+            color: $pinkdark
 
 .container
     min-width: 940px
     max-width: 1840px
     margin: 0 auto
-    
 
 // HEAD STYLES
 .head
@@ -71,13 +80,13 @@ body
     height: 80px
     background: #fff
     border-bottom: 1px solid #bbb
-    .logo 
+    .logo
         width: 40% 
         float: left 
         padding: 10px 0 0 20px
     .powernav
         width: 50% 
-        text-align: right 
+        text-align: right
         float: right 
         margin: 30px 20px 0 0
 
@@ -99,7 +108,7 @@ body
         overflow: hidden
         -webkit-transform: rotate(45deg)
         z-index: -2
-    // If the navigation is hovered, resize to automatic height, 
+    // If the navigation is hovered, resize to automatic height,
     // so extra options will be shown..
     &:hover
         .expander
@@ -223,7 +232,7 @@ ul.drilldown
             font-weight: normal
             a
                 color: $pink
-            ul 
+            ul
                 padding-top: 4px
                 display: block
 
@@ -239,8 +248,8 @@ ul.drilldown
             style: solid 
             color: #ddd
         padding: 10px
-    
-    .fsNieuw 
+
+    .fsNieuw
         margin: 0 10px
         position: relative
         .boxCalendar
@@ -292,8 +301,7 @@ ul.drilldown
                         text-align: right
                         color: $pink
                         font-size: 14px
-            .fldDescription 
-                
+            .fldDescription
                 padding-right: 5px
                 textarea
                     @include rounded(5px)
@@ -347,10 +355,85 @@ ul.drilldown
                 text-align: left
             .select
                 width: 20px
-//            .description                
+//            .description
             .duration
                 width: 60px
             .date
                 width: 120px
             .project
                 width: 120px
+
+.dashboard
+    display: block
+    width: 100%
+    .column.w50
+        margin: 0
+        padding: 0
+        float: left
+        width: 50%
+        display: block
+        .block
+            clear: both
+            margin: 10px 20px 20px
+            .button
+                float: right
+            h3
+                font-weight: normal
+                padding-left: 10px
+            ul
+                list-style: none
+                margin: 0 0 10px
+                padding: 0
+                font-size: 11px
+                li
+                    @include rounded(5px)
+                    background: #f4f4f4
+                    margin-bottom: 3px
+                    padding: 4px 10px
+                    &:hover
+                        background: #efefef
+                    .dt
+                        float: right
+
+//classes for showing progress using the background gradient option in Css3
+.dashboard .column.w50 .block ul
+    .pr05
+        @include progressBackground(5%, #ffbfdf, #efefef)
+    .pr10
+        @include progressBackground(10%, #ffbfdf, #efefef)
+    .pr15
+        @include progressBackground(15%, #ffbfdf, #efefef)
+    .pr20
+        @include progressBackground(20%, #ffbfdf, #efefef)
+    .pr25
+        @include progressBackground(25%, #ffbfdf, #efefef)
+    .pr30
+        @include progressBackground(30%, #ffbfdf, #efefef)
+    .pr35
+        @include progressBackground(35%, #ffbfdf, #efefef)
+    .pr40
+        @include progressBackground(40%, #ffbfdf, #efefef)
+    .pr45
+        @include progressBackground(45%, #ffbfdf, #efefef)
+    .pr50
+        @include progressBackground(50%, #ffbfdf, #efefef)
+    .pr55
+        @include progressBackground(55%, #ffbfdf, #efefef)
+    .pr60
+        @include progressBackground(60%, #ffbfdf, #efefef)
+    .pr65
+        @include progressBackground(65%, #ffbfdf, #efefef)
+    .pr70
+        @include progressBackground(70%, #ffbfdf, #efefef)
+    .pr75
+        @include progressBackground(75%, #ffbfdf, #efefef)
+    .pr80
+        @include progressBackground(80%, #ffbfdf, #efefef)
+    .pr85
+        @include progressBackground(85%, #ffbfdf, #efefef)
+    .pr90
+        @include progressBackground(90%, #ffbfdf, #efefef)
+    .pr95
+        @include progressBackground(95%, #ffbfdf, #efefef)
+    .pr100
+        @include progressBackground(100%, #ffbfdf, #efefef)

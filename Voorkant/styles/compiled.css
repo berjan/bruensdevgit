@@ -21,6 +21,11 @@ body {
     font-size: 1.8em; }
   body h2 {
     font-size: 1.5em; }
+  body a {
+    color: #d5015e;
+    text-decoration: none; }
+    body a:hover {
+      color: #aa014b; }
 
 .container {
   min-width: 940px;
@@ -355,3 +360,120 @@ ul.drilldown {
       text-align: left; }
     .timetrack .entries table .select {
       width: 20px; }
+
+.dashboard {
+  display: block;
+  width: 100%; }
+  .dashboard .column.w50 {
+    margin: 0;
+    padding: 0;
+    float: left;
+    width: 50%;
+    display: block; }
+    .dashboard .column.w50 .block {
+      clear: both;
+      margin: 10px 20px 20px; }
+      .dashboard .column.w50 .block .button {
+        float: right; }
+      .dashboard .column.w50 .block h3 {
+        font-weight: normal;
+        padding-left: 10px; }
+      .dashboard .column.w50 .block ul {
+        list-style: none;
+        margin: 0 0 10px;
+        padding: 0;
+        font-size: 11px; }
+        .dashboard .column.w50 .block ul li {
+          -webkit-border-radius: 5px;
+          -moz-border-radius: 5px;
+          -ms-border-radius: 5px;
+          -o-border-radius: 5px;
+          border-radius: 5px;
+          background: #f4f4f4;
+          margin-bottom: 3px;
+          padding: 4px 10px; }
+          .dashboard .column.w50 .block ul li:hover {
+            background: #efefef; }
+          .dashboard .column.w50 .block ul li .dt {
+            float: right; }
+
+.dashboard .column.w50 .block ul .pr05 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 5% top, 5% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 5%, #efefef 5%); }
+.dashboard .column.w50 .block ul .pr10 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 10% top, 10% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 10%, #efefef 10%); }
+.dashboard .column.w50 .block ul .pr15 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 15% top, 15% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 15%, #efefef 15%); }
+.dashboard .column.w50 .block ul .pr20 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 20% top, 20% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 20%, #efefef 20%); }
+.dashboard .column.w50 .block ul .pr25 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 25% top, 25% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 25%, #efefef 25%); }
+.dashboard .column.w50 .block ul .pr30 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 30% top, 30% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 30%, #efefef 30%); }
+.dashboard .column.w50 .block ul .pr35 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 35% top, 35% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 35%, #efefef 35%); }
+.dashboard .column.w50 .block ul .pr40 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 40% top, 40% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 40%, #efefef 40%); }
+.dashboard .column.w50 .block ul .pr45 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 45% top, 45% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 45%, #efefef 45%); }
+.dashboard .column.w50 .block ul .pr50 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 50% top, 50% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 50%, #efefef 50%); }
+.dashboard .column.w50 .block ul .pr55 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 55% top, 55% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 55%, #efefef 55%); }
+.dashboard .column.w50 .block ul .pr60 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 60% top, 60% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 60%, #efefef 60%); }
+.dashboard .column.w50 .block ul .pr65 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 65% top, 65% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 65%, #efefef 65%); }
+.dashboard .column.w50 .block ul .pr70 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 70% top, 70% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 70%, #efefef 70%); }
+.dashboard .column.w50 .block ul .pr75 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 75% top, 75% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 75%, #efefef 75%); }
+.dashboard .column.w50 .block ul .pr80 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 80% top, 80% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 80%, #efefef 80%); }
+.dashboard .column.w50 .block ul .pr85 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 85% top, 85% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 85%, #efefef 85%); }
+.dashboard .column.w50 .block ul .pr90 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 90% top, 90% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 90%, #efefef 90%); }
+.dashboard .column.w50 .block ul .pr95 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 95% top, 95% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 95%, #efefef 95%); }
+.dashboard .column.w50 .block ul .pr100 {
+  background: #ffbfdf;
+  background: -webkit-gradient(linear, 100% top, 100% top, from(#ffbfdf), to(#efefef));
+  background: -moz-linear-gradient(left, #ffbfdf, #ffbfdf 100%, #efefef 100%); }
