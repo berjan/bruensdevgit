@@ -236,6 +236,27 @@ ul.drilldown
                 padding-top: 4px
                 display: block
 
+// STYLING OF FORM ELEMENTS
+form
+    margin: 0
+    padding: 0
+    .form_field
+        display: block
+        height: auto
+        label
+            width: 80px
+            display: block
+            float: left
+            padding: 2px 5px 2px 0
+            margin-top: 2px
+            text-align: right
+            color: #999
+        input, textarea, select
+            @include rounded(5px)
+            padding: 2px 5px
+            width: 80%
+            border: 1px solid #ccc
+
 // STYLING OF TIMETRACKING
 .timetrack
     .fsSearch
